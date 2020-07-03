@@ -34,7 +34,7 @@ def test_find_ext_in_dir(test_input, expected):
     ('txt_test_one.txt', './txt_test_one.txt'),
     ('txt_test_two.txt', './test_dir/txt_test_two.txt'),
     ('txt_test_three.txt', './test_dir/test_dir_two/txt_test_three.txt'),
-    ('helloworld.c', 'None')
+    ('helloworld.c', None)
 ])
 def test_find_file(test_input, expected):
     assert find_file(test_input) == expected
