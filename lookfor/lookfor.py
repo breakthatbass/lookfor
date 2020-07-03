@@ -32,3 +32,7 @@ def find_ext_in_dir(ext):
                 print(os.path.join(root, name))
                 count += 1
     return 'found {} {} files'.format(count, ext)
+
+
+def find_file(file):
+    pass

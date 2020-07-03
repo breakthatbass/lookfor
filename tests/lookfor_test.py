@@ -2,7 +2,7 @@ import pytest
 import sys
 
 sys.path.append("../lookfor")
-from lookfor import find_dir, find_ext_all, find_ext_in_dir
+from lookfor import find_dir, find_ext_all, find_ext_in_dir, find_file
 
 
 @pytest.mark.parametrize('test_input, expected', [
@@ -28,3 +28,13 @@ def test_find_ext_all(test_input, expected):
 ])
 def test_find_ext_in_dir(test_input, expected):
     assert find_ext_in_dir(test_input) == expected
+
+
+@pytest.mark.parametrize('test_input, expected', [
+    ('txt_test_one.txt', './txt_test_one.txt'),
+    ('txt_test_two.txt', './test_dir/txt_test_two.txt'),
+    ('txt_test_three.txt', './test_dir/test_dir_two/txt_test_three.txt'),
+    ('helloworld.c', 'None')
+])
+def test_find_file(test_input, expected):
+    assert find_file(test_input) == expected
