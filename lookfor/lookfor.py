@@ -42,5 +42,24 @@ def find_file(file):
                 return os.path.join(root, name)
     return None
 
+
 def search_file(str, f):
-    pass
+    '''search a file for a string. Returns an object'''
+    f = open(f)         # open file as f
+    found = False       # false by default
+    count = 0           # keep track of each time str is found
+    line_num = 1        # to keep track of what line the loop is on, needs to start at one
+    lines_found = []    # keep a list of the lines that the str was located on
+
+    for line in f:
+        if str.lower() in line.lower(): # lower() for case insensitivity
+            found = True
+            count += 1
+            lines_found.append(line_num)
+        line_num += 1
+    
+    if count == 0:
+        return 'Not Found'
+    else:
+        return {'string': str, 'found': found, 'count': count, 'found on lines': f"{lines_found}"}
+

@@ -3,7 +3,7 @@ hello world
 this file is a test file to test
 the search_file function
 this is the second instance of the word HELLO
-to test that the function can find upper and lower case
-versions of the same word
+the program is case insensitive
 
-goodbye
+
+Goodbye
