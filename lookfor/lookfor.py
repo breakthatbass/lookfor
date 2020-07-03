@@ -41,3 +41,6 @@ def find_file(file):
             if name == file:
                 return os.path.join(root, name)
     return None
+
+def search_file(str, f):
+    pass
