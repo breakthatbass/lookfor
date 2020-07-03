@@ -11,4 +11,11 @@ def find_dir(dir):
 
 def find_ext_all(ext):
     '''searches for all files with ext in all directories starting with current directory'''
-    pass
+    count = 0 #keep track of number of found files
+    for root, dirs, files in os.walk('.'):
+        for name in files:
+            if name.endswith(ext):
+                # if found, print path to file
+                print(os.path.join(root, name))
+                count += 1
+    return 'found {} {} files'.format(count, ext)
