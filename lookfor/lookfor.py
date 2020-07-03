@@ -63,5 +63,5 @@ def search_file(str, file):
         return 'Not Found'
     else:
         f.close()
-        return {'string': str, 'found': found, 'count': count, 'found on lines': f"{lines_found}"}
+        return {'string': str, 'count': count, 'found on lines': f"{lines_found}"}
 
