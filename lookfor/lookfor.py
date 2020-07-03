@@ -19,3 +19,16 @@ def find_ext_all(ext):
                 print(os.path.join(root, name))
                 count += 1
     return 'found {} {} files'.format(count, ext)
+
+
+def find_ext_in_dir(ext):
+    '''search for all files with ext only in current directory. Does not go into subdirectories'''
+    count = 0 # keep track of number of found files
+    for root, dirs, files in os.walk('.'):
+        dirs.clear()
+        for name in files:
+            if name.endswith(ext):
+                # if found, print path to file
+                print(os.path.join(root, name))
+                count += 1
+    return 'found {} {} files'.format(count, ext)
