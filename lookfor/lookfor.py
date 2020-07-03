@@ -43,9 +43,9 @@ def find_file(file):
     return None
 
 
-def search_file(str, f):
+def search_file(str, file):
     '''search a file for a string. Returns an object'''
-    f = open(f)         # open file as f
+    f = open(file)         # open file as f
     found = False       # false by default
     count = 0           # keep track of each time str is found
     line_num = 1        # to keep track of what line the loop is on, needs to start at one
