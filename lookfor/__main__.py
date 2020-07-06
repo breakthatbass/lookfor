@@ -1,6 +1,6 @@
 import sys
 from argparse import ArgumentParser
-from lookfor import find_dir, find_ext_all, find_ext_in_dir, find_file, search_file
+from .lookfor import find_dir, find_ext_all, find_ext_in_dir, find_file, search_file
 
 
 def main():
