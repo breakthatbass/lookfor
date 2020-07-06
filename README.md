@@ -6,6 +6,11 @@ It's not as powerful as ```find``` or ```grep``` but it's way simpler to use.
 
 ### Installation
 
+#### Install with pip
+```pip install lookfor1```
+
+#### or
+
 ```git clone https://github.com/breakthatbass/lookfor.git```
 
 ```cd lookfor```
