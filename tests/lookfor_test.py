@@ -1,8 +1,8 @@
 import pytest
 import sys
 
-sys.path.append("../lookfor")
-from lookfor import find_dir, find_ext_all, find_ext_in_dir, find_file, search_file
+
+from lookfor.lookfor import find_dir, find_ext_all, find_ext_in_dir, find_file, search_file
 
 
 @pytest.mark.parametrize('test_input, expected', [
