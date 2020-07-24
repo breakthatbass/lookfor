@@ -2,7 +2,7 @@
 
 ```lookfor``` is a simple command line tool to find things: files, directories, files by extension, and strings within files.
 
-It's like ```find``` and ```grep``` built into one program only it's slower and way less powerful. One the other hand, it's easier than ```grep``` to find occurances of strings in files.
+It's like ```find``` and ```grep``` built into one program only it's slower and way less powerful.
 
 ### Installation
 
