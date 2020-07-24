@@ -41,3 +41,4 @@ It's like ```find``` and ```grep``` built into one program only it's slower and 
 - add colors for files and directories
 - do a null check after file open in search_file function
 - create a replace function to replace strings in files
+- add function to look for string in all files in directory

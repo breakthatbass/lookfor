@@ -66,3 +66,7 @@ def search_file(str, file):
         else:
             f.close()
             return {'string': str, 'count': count, 'found on lines': f"{lines_found}"}
+
+def replace(str, file):
+    
+    return
