@@ -1,7 +1,6 @@
-import os
+import os, sys
 
 def find_dir(dir):
-    '''searches for dir in all directories starting with current directory'''
     for root, dirs, files in os.walk('.'):
         for name in dirs:
             if name == dir:
@@ -44,24 +43,26 @@ def find_file(file):
 
 
 def search_file(str, file):
-    '''search a file for a string. Returns an object'''
-    f = open(file)      # open file as f
+    '''search a file for a string. Returns an object'''    
     found = False       # false by default
     count = 0           # keep track of each time str is found
     line_num = 1        # to keep track of what line the loop is on, needs to start at one
     lines_found = []    # keep a list of the lines that the str was located on
 
-    for line in f:
-        if str.lower() in line.lower(): # lower() for case insensitivity
-            found = True
-            count += 1
-            lines_found.append(line_num)
-        line_num += 1
-    
-    if count == 0:
-        f.close()
-        return 'Not Found'
+    if not os.path.exists(file):
+        return 'Error opening file'
     else:
-        f.close()
-        return {'string': str, 'count': count, 'found on lines': f"{lines_found}"}
-
+        f = open(file, 'r')
+        for line in f:
+            if str.lower() in line.lower(): # lower() for case insensitivity
+                found = True
+                count += 1
+                lines_found.append(line_num)
+            line_num += 1
+        
+        if count == 0:
+            f.close()
+            return 'Not Found'
+        else:
+            f.close()
+            return {'string': str, 'count': count, 'found on lines': f"{lines_found}"}

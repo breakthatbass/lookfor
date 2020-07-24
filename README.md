@@ -36,3 +36,8 @@ It's like ```find``` and ```grep``` built into one program only it's slower and 
 ```lookfor --extin .ext``` only searches the current directory for the files. It then prints the number of files found. If none exist, it would return ```found 0 .ext files```.
 
 ```lookfor --search str file.ext``` would return an object like ```{'string': str, 'count': 6, 'found on lines': '[3, 12, 24, 37, 46, 49]'}``` if the str is in the file. Otherwise, it returns ```Not Found```.
+
+### TODO
+- add colors for files and directories
+- do a null check after file open in search_file function
+- create a replace function to replace strings in files

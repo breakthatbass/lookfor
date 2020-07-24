@@ -1,6 +1,10 @@
 import sys
 from argparse import ArgumentParser
-from .lookfor import find_dir, find_ext_all, find_ext_in_dir, find_file, search_file
+from lookfor import find_dir, find_ext_all, find_ext_in_dir, find_file, search_file
+
+def print_usage():
+    print('Usage: lookfor <command> [arguments]')
+    print('--file, -f file/tsearch for <file> in all directories starting with current directory')
 
 
 def main():
@@ -25,7 +29,8 @@ def main():
     elif results.search:
         print(search_file(results.search[0], results.search[1]))
     else:
-        print('nope!')
+        print_usage()
+
 
 if __name__ == "__main__":
     main()

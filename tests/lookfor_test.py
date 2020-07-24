@@ -43,7 +43,8 @@ def test_find_file(test_input, expected):
 @pytest.mark.parametrize('test_input, test_input2, expected',[
     ('hello', 'txt_test_one.txt', {'string': 'hello', 'count': 2, 'found on lines': '[1, 5]'}),
     ('goodbye', 'txt_test_one.txt', {'string': 'goodbye', 'count': 1, 'found on lines': '[9]'}),
-    ('lookfor', 'txt_test_one.txt', 'Not Found')
+    ('lookfor', 'txt_test_one.txt', 'Not Found'),
+    ('hello', 'nonexistent_file.txt', 'test failed')
 ])
 def test_search_file(test_input, test_input2, expected):
     assert search_file(test_input, test_input2) == expected
