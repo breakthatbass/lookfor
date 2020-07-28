@@ -3,8 +3,12 @@ from argparse import ArgumentParser
 from lookfor import find_dir, find_ext_all, find_ext_in_dir, find_file, search_file
 
 def print_usage():
-    print('Usage: lookfor <command> [arguments]')
-    print('--file, -f file/tsearch for <file> in all directories starting with current directory')
+    print('\nUsage: lookfor <command> [arguments]\n')
+    print('--file, -f: Searches for file recursively')
+    print('--dir, -d: Searches for directory recursively')
+    print('--extall, -ea: Searches for all files with ext recursively')
+    print('--extin, -ei: Searches for all files with ext in current directory')
+    print('--search, -s: Searches file for a string. Returns an object\n')
 
 
 def main():
