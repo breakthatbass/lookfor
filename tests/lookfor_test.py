@@ -48,3 +48,11 @@ def test_find_file(test_input, expected):
 ])
 def test_search_file(test_input, test_input2, expected):
     assert search_file(test_input, test_input2) == expected
+
+
+@pytest.mark.parametrize('test_input, test_input2, test_input3, expected', [
+    ('test_test_one.txt', 'world', 'planet', 0),
+    ('test_test_one.txt', 'coffee', 'tea', -1)
+])
+def test_replace(test_input, test_input2, test_input3, expected):
+    assert replace(test_input, test_input2, test_input3) == expected
