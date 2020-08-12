@@ -1,6 +1,6 @@
 import sys
 from argparse import ArgumentParser
-from lookfor import find_dir, find_ext_all, find_ext_in_dir, find_file, search_file
+from .lookfor import find_dir, find_ext_all, find_ext_in_dir, find_file, search_file, repstr
 
 def print_usage():
     print('\nUsage: lookfor <command> [arguments]\n')
@@ -9,6 +9,7 @@ def print_usage():
     print('--extall, -ea: Searches for all files with ext recursively')
     print('--extin, -ei: Searches for all files with ext in current directory')
     print('--search, -s: Searches file for a string. Returns an object\n')
+    print('--replace, -r: search a file for a string and replace it')
 
 
 def main():
@@ -19,6 +20,7 @@ def main():
     argparser.add_argument("--extall", "-ea", help="searches for all files with ext in all directories starting with current directory")
     argparser.add_argument("--extin", "-ei", help="search for all files with ext only in current directory. Does not go into subdirectories")
     argparser.add_argument("--search", "-s", nargs=2, help="search a file for a string. Returns an object")
+    argparser.add_argument("--replace", "-r", nargs=3, help="search a file for a string and replace it")
 
     results = argparser.parse_args()
     
@@ -32,6 +34,8 @@ def main():
         print(find_ext_in_dir(results.extin))
     elif results.search:
         print(search_file(results.search[0], results.search[1]))
+    elif results.replace:
+        repstr(results.replace[0], results.replace[1], results.replace[2])
     else:
         print_usage()
 

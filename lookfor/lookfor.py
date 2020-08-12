@@ -67,6 +67,18 @@ def search_file(str, file):
             f.close()
             return {'string': str, 'count': count, 'found on lines': f"{lines_found}"}
 
-def replace(str, file):
-    
-    return
+
+def repstr(file, string, newstr):
+
+    try:
+        fp = open(file, 'r')
+        filedata = fp.read()
+        fp.close()
+
+        newdata = filedata.replace(string, newstr)
+        fp = open(file, 'w')
+        fp.write(newdata)
+        fp.close()
+        return 0
+    except:
+        return 1

@@ -1,0 +1,9 @@
+hello planet
+
+this file is a test file to test
+the search_file function
+this is the second instance of the word HELLO
+the program is case insensitive
+
+
+Goodbye
