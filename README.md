@@ -24,6 +24,7 @@ It's like ```find``` and ```grep``` built into one program only it's slower and 
 --extall, -ea .ext      search for all files with <.ext> in all directories starting with current directory
 --extin, --ei .ext      search for all files with <.ext> only in current directory
 --search, -s str file   search a file for a string. Returns an object
+--replace, -r file str newstr  search a file for a string and replace it
 ```
 
 #### Examples:
@@ -37,8 +38,9 @@ It's like ```find``` and ```grep``` built into one program only it's slower and 
 
 ```lookfor --search str file.ext``` would return an object like ```{'string': str, 'count': 6, 'found on lines': '[3, 12, 24, 37, 46, 49]'}``` if the str is in the file. Otherwise, it returns ```Not Found```.
 
+```lookfor -r file.ext str newstr``` would search the ```file.ext``` for ```str``` and replace it with ```newstr```.  
+
 ### TODO
 - add colors for files and directories
 - do a null check after file open in search_file function
-- create a replace function to replace strings in files
 - add function to look for string in all files in directory
