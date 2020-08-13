@@ -7,7 +7,6 @@ def find_dir(dir):
                 return os.path.join(root, name)
                 # if not found, it returns None
 
-
 def find_ext_all(ext):
     '''searches for all files with ext in all directories starting with current directory'''
     count = 0 #keep track of number of found files
@@ -79,6 +78,8 @@ def repstr(file, string, newstr):
         fp = open(file, 'w')
         fp.write(newdata)
         fp.close()
+
+        print(f'{string} has been replaced with {newstr}')
         return 0
     except:
         return 1
