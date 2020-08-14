@@ -29,23 +29,14 @@ It's like ```find``` and ```grep``` built into one program only it's slower and 
 
 ### Examples:
 
-```lookfor -f file.py``` 
-- returns ```path/to/file``` or ```None```.
+```lookfor -f file.py```                returns ```path/to/file```.
 
-```lookfor -d directory``` 
-- returns ```path/to/dir``` or ```None```.
+```lookfor -d directory```              returns ```path/to/dir```.
 
-```lookfor -ea .py``` 
-- returns ```path/to/file.py``` for every ```.py``` file found with count or a 0 count.
+```lookfor -ea .py```                   returns ```path/to/file.py``` for every ```.py``` file found.
 
-```lookfor -ea .py``` 
-- returns ```path/to/file.py``` for every ```.py``` file found with count or a 0 count.
+```lookfor -ei .py```                   returns ```path/to/file.py``` for every ```.py``` file found.
 
-```lookfor -ei .py``` 
-- returns ```path/to/file.py``` for every ```.py``` file found with count or a 0 count.
+```lookfor -s file.py hello```          returns an object ```{'string': hello, 'count': 1, 'found on lines': 21}``` or ```Not Found```.
 
-```lookfor -s file.py hello```
-- returns an object ```{'string': hello, 'count': 1, 'found on lines': 21}``` or ```Not Found```.
-
-```lookfor -r file.py coffee decaf```
-- returns ```coffee has been replaced with decaf``` or returns nothing if file or string can't be found.
+```lookfor -r file.py coffee decaf```   returns ```coffee has been replaced with decaf``` or returns nothing.
