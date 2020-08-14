@@ -1,6 +1,6 @@
 # lookfor
 
-```lookfor``` is a simple command line tool to find things: files, directories, files by extension, and strings within files.
+```lookfor``` is a simple command line tool to find things: files, directories, files by extension, and strings within files. 
 
 It's like ```find``` and ```grep``` built into one program only it's slower and way less powerful.
 

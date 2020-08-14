@@ -5,8 +5,9 @@ def find_dir(dir):
     for root, dirs, files in os.walk('.'):
         for name in dirs:
             if name == dir:
-                return os.path.join(root, name)
+                print(os.path.join(root, name))
                 # if not found, it returns None
+    return
 
 def find_ext_all(ext):
     '''Searches for all files with ext in all directories starting with current directory'''
@@ -38,8 +39,8 @@ def find_file(file):
     for root, dirs, files in os.walk('.'):
         for name in files:
             if name == file:
-                return os.path.join(root, name)
-    return None
+                print(os.path.join(root, name))
+#return None
 
 
 def search_file(str, file):

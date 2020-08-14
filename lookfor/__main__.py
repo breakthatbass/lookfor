@@ -25,15 +25,20 @@ def main():
     results = argparser.parse_args()
     
     if results.file:
-        print(find_file(results.file))
+        find_file(results.file)
+
     elif results.dir:
-        print(find_dir(results.dir))
+        find_dir(results.dir)
+
     elif results.extall:
         print(find_ext_all(results.extall))
+
     elif results.extin:
         print(find_ext_in_dir(results.extin))
+
     elif results.search:
         print(search_file(results.search[0], results.search[1]))
+        
     elif results.replace:
         repstr(results.replace[0], results.replace[1], results.replace[2])
     else:
