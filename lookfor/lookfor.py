@@ -1,6 +1,7 @@
 import os, sys
 
 def find_dir(dir):
+    '''Search for file in all directories starting with the current directory'''
     for root, dirs, files in os.walk('.'):
         for name in dirs:
             if name == dir:
@@ -8,7 +9,7 @@ def find_dir(dir):
                 # if not found, it returns None
 
 def find_ext_all(ext):
-    '''searches for all files with ext in all directories starting with current directory'''
+    '''Searches for all files with ext in all directories starting with current directory'''
     count = 0 #keep track of number of found files
     for root, dirs, files in os.walk('.'):
         for name in files:
@@ -20,7 +21,7 @@ def find_ext_all(ext):
 
 
 def find_ext_in_dir(ext):
-    '''search for all files with ext only in current directory. Does not go into subdirectories'''
+    '''Search for all files with ext only in current directory. Does not go into subdirectories'''
     count = 0 # keep track of number of found files
     for root, dirs, files in os.walk('.'):
         dirs.clear()
@@ -33,7 +34,7 @@ def find_ext_in_dir(ext):
 
 
 def find_file(file):
-    '''search for file in all directories starting with the current directory'''
+    '''Search for file in all directories starting with the current directory'''
     for root, dirs, files in os.walk('.'):
         for name in files:
             if name == file:
@@ -42,7 +43,7 @@ def find_file(file):
 
 
 def search_file(str, file):
-    '''search a file for a string. Returns an object'''    
+    '''Search a file for a string. Returns an object'''    
     found = False       # false by default
     count = 0           # keep track of each time str is found
     line_num = 1        # to keep track of what line the loop is on, needs to start at one
@@ -67,19 +68,21 @@ def search_file(str, file):
             return {'string': str, 'count': count, 'found on lines': f"{lines_found}"}
 
 
-def repstr(file, string, newstr):
+def repstr(file, str, newstr):
+    '''Search a file for a string a replace it. 
+        Does nothing if string isn't found'''
 
     try:
         fp = open(file, 'r')
         filedata = fp.read()
         fp.close()
 
-        newdata = filedata.replace(string, newstr)
+        newdata = filedata.replace(str, newstr)
         fp = open(file, 'w')
         fp.write(newdata)
         fp.close()
 
-        print(f'{string} has been replaced with {newstr}')
+        print(f'{str} has been replaced with {newstr}')
         return 0
     except:
         return 1

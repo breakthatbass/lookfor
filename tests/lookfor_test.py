@@ -52,6 +52,7 @@ def test_search_file(test_input, test_input2, expected):
 
 @pytest.mark.parametrize('test_input, test_input2, test_input3, expected', [
     ('test_repstr.txt', 'world', 'planet', 0),
+    ('test_repstr.txt', 'coffee', 'tea', 0),
     ('txt_test_sdsd.txt', 'coffee', 'tea', 1)
 ])
 def test_repstr(test_input, test_input2, test_input3, expected):
