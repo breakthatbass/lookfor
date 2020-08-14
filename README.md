@@ -29,6 +29,12 @@ It's like ```find``` and ```grep``` built into one program only it's slower and 
 
 ### Examples:
 
-```lookfor -f file.py``` returns ```path/to/file``` or ```None```.
+```lookfor -f file.py``` 
+- returns ```path/to/file``` or ```None```.
 
-```lookfor -d directory``` returns ```path/to/dir``` or ```None```.
+```lookfor -d directory``` 
+- returns ```path/to/dir``` or ```None```.
+
+```lookfor -ea .py``` 
+- returns ```path/to/file.py``` for every ```.py``` file found with count or ```found 0 .py files``.
+
