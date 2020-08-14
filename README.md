@@ -17,7 +17,7 @@ It's like ```find``` and ```grep``` built into one program only it's slower and 
 
 ```lookfor <command> [arguments]```
 
-#### The commands are:
+#### Commands:
 ```
 --file, -f file                 search for <file> in all directories starting with current directory
 --dir, -d  directory            search for <dir> in all directories starting with current directory
@@ -26,3 +26,9 @@ It's like ```find``` and ```grep``` built into one program only it's slower and 
 --search, -s str file           search a file for a string. Returns an object
 --replace, -r file str newstr   search a file for a string and replace it
 ```
+
+### Examples:
+
+```lookfor -f file.py``` returns ```path/to/file``` or ```None```.
+
+```lookfor -d directory``` returns ```path/to/dir``` or ```None```.
