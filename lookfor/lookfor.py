@@ -39,7 +39,6 @@ def find_file(file):
         for name in files:
             if name == file:
                 print(os.path.join(root, name))
-#return None
 
 
 def search_file(file, str):
@@ -49,20 +48,15 @@ def search_file(file, str):
     line_num = 1        # to keep track of what line the loop is on, needs to start at one
     lines_found = []    # keep a list of the lines that the str was located on
 
-    '''
-    if not os.path.exists(file):
-        return 'Error opening file'
-    else:
-    '''
+
     try:
         fp = open(file, 'r')
         for line in fp:
-            if str.lower() in line.lower(): # lower() for case insensitivity
+            if str.lower() in line.lower(): 
                 found = True
                 count += 1
                 lines_found.append(line_num)
             line_num += 1
-        
         fp.close()
 
         if count == 0:
