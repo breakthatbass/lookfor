@@ -24,7 +24,7 @@ It's like ```find``` and ```grep``` built into one program only it's slower and 
 --extall, -ea .ext                  search for all files with <.ext> in all directories recursively
 --extin, --ei .ext                  search for all files with <.ext> only in current directory
 --search, -s str file               search a file for a string. Returns an object
---replace, -r file str newstr       search a file for a string and replace it
+--replace, -r file str newstr       search a file for a string and replace it with new string
 ```
 
 ### Examples:
@@ -38,7 +38,7 @@ lookfor -ea .py                     returns path/to/file.py for every .py file f
 
 lookfor -ei .py                     returns path/to/file.py for every .py file found.
 
-lookfor -s file.py hello            returns an object {'string': hello, 'count': 1, 'found on lines': 21} or Not Found.
+lookfor -s file.py hello            returns an object "{'string': hello, 'count': 1, 'found on lines': 21}" or "Not Found".
 
-lookfor -r file.py coffee decaf     returns coffee has been replaced with decaf or returns nothing.
+lookfor -r file.py coffee decaf     returns "coffee has been replaced with decaf" or returns nothing.
 ```
