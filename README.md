@@ -36,9 +36,9 @@ lookfor -d directory                returns path/to/dir.
 
 lookfor -ea .py                     returns path/to/file.py for every .py file found.
 
-lookfor -ei .py```                  returns path/to/file.py for every .py file found.
+lookfor -ei .py                     returns path/to/file.py for every .py file found.
 
-lookfor -s file.py hello```         returns an object {'string': hello, 'count': 1, 'found on lines': 21} or Not Found.
+lookfor -s file.py hello            returns an object {'string': hello, 'count': 1, 'found on lines': 21} or Not Found.
 
 lookfor -r file.py coffee decaf     returns coffee has been replaced with decaf or returns nothing.
 ```
