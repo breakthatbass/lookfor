@@ -16,7 +16,7 @@ def print_usage():
 def main():
 
     argparser = ArgumentParser(description='Look for things...')
-    argparser.add_argument("--file", "-f", help="search for filei n all directories recursively")
+    argparser.add_argument("--file", "-f", help="search for file in all directories recursively")
     argparser.add_argument("--dir", "-d", help="search for dir in all directories recursively")
     argparser.add_argument("--extall", "-ea", help="searches for all files with ext in all directories recursively")
     argparser.add_argument("--extin", "-ei", help="search for all files with ext only in current directory")
