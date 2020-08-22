@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='lookfor1',
+    name='lookfor',
     version='1.0.0',
     description='terminal program to look for things',
     author='Taylor Gamache',
