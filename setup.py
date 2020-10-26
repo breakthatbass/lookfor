@@ -10,6 +10,6 @@ setup(
     packages=find_packages(),
     license='MIT',
     entry_points={
-        'console_scripts' : ['lookfor = lookfor.__main__:main']
+        'console_scripts' : ['lf = lookfor.__main__:main']
    }
 )
